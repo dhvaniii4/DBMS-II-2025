@@ -1,0 +1,50 @@
+Part - A 
+1. Create a new database named “Darshan”. 
+use Darshan
+2. Create another new database named “DIET”. 
+use DIET
+3. List all databases. 
+show dbs
+4. Check the current database.
+db 
+5. Drop “DIET” database.
+ db.dropDatabase('DIET')
+6. Create a collection named “Student” in the “Darshan” database. 
+db.createCollection('Student')
+7. Create a collection named “Department” in the “Darshan” database. 
+db.createCollection('Department')
+8. List all collections in the “Darshan” database.
+show collections
+9. Insert a single document using insertOne into “Department” collection. (Dname:’CE’, HOD:’Patel’)
+db.Department.insertOne({'Dname':'CE','HOD':'Patel'})
+10. Insert two document using insertMany into “Department” collection. (Dname:’IT’ and Dname:’ICT’) 
+db.Department.insertMany([{'Dname':'IT'},{'Dname':'ICT'}])
+11. Drop a collection named “Department” from the “Darshan” database.
+ db.Department.drop()
+12. Insert a single document using insertOne into “Student” collection.  
+(Fields are Name, City, Branch, Semester, Age) Insert your own data. 
+db.Sti
+13. Insert three documents using insertMany into “Student” collection. 
+(Fields are Name, City, Branch, Semester, Age) Insert your three friend’s data. 
+db.Student.insertOne({'Name':'Shiv','City':'Kashi','Semester':4,'Age':18})
+
+14. Check whether “Student” collection exists or not. 
+db.Student.exists
+
+15. Check the stats of “Student” collection.
+ db.Student.stats()
+
+16. Drop the “Student” collection. 
+ db.Student.drop()
+
+17. Create a collection named “Deposit”.
+ db.createCollection('Deposit')
+
+18. Insert following data in to “Deposit” collection. 
+db.Deposit.insertMany([{'Actno':101,'Cname':'Anil','Bname':'VRCE','Amount':1000,'City':'Rajkot'},{'Actno':102,'Cname':'Sunil','Bname':'Ajni','Amount':5000,'City':'Surat'},{'Actno':103,'Cname':'Mehul','Bname':'KAROLBAGH','Amount':3500,'City':'Baroda'}])
+
+19. Display all the documents of “Deposit” collection. 
+db.Deposit.find()
+
+20. Drop the “Deposit” collection. 
+db.Deposit.drop()
